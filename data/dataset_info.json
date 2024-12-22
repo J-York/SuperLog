@@ -1,6 +1,12 @@
 {
   "NLPLog":{
-    "file_name":"NLPLog.json"
+    "file_name":"NLPLog.json",
+    "columns":{
+      "prompt": "instruction",
+      "query": "",
+      "response": "output",
+      "history": ""
+    }
   },
   "alpaca_1k":{
     "file_name":"alpaca_1k.json"
