@@ -1,5 +1,8 @@
 {
-  "NLPLog" : {
+  "NLPLog":{
     "file_name":"NLPLog.json"
+  },
+  "alpaca_1k":{
+    "file_name":"alpaca_1k.json"
   }
 }
