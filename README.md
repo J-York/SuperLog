@@ -25,5 +25,5 @@ llamafactory-cli train examples/train_full/train_superlog.yaml
 In this step, we fine-tune SuperLog using a selection of 1000 high-quality instruction data from Alpacar. The purpose of this step is to enable SuperLog to have a good ability to respond to human instructions, understand log analysis commands, and complete the corresponding tasks.
 
 ```bash
-llamafactory-cli train examples/train_full/train_superlog.yaml
+llamafactory-cli train examples/train_full/iftrain_superlog.yaml
 ```
