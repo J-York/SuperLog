@@ -1,12 +1,11 @@
 ### model
-model_name_or_path: models/Llama-2-7b-hf
-trust_remote_code: true
+model_name_or_path: models/Llama-2/Llama-2-7b-hf
 
 ### method
 stage: sft
 do_train: True
 finetuning_type: full
-deepspeed: cache/ds_z3_config.json
+deepspeed: examples/deepspeed/ds_z3_config.json
 
 ### dataset
 dataset: NLPLog
