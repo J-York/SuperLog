@@ -1,6 +1,6 @@
 # SuperLog & NLPLog
 
-This repository includes the training codes for LogCraft, as well as a specifically designed interpretable dataset for the log analysis domain, named NLPLog.
+This repository includes the training codes for SuperLog, as well as a specifically designed interpretable dataset for the log analysis domain, named NLPLog.
 
 ## NLPLog Dataset
 
