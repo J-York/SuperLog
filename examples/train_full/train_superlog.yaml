@@ -1,0 +1,47 @@
+### model
+model_name_or_path: models/Llama-2-7b-hf
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: True
+finetuning_type: full
+deepspeed: cache/ds_z3_config.json
+
+### dataset
+dataset: NLPLog
+template: default
+cutoff_len: 2048
+max_samples: 100000
+overwrite_cache: false
+preprocessing_num_workers: 16
+
+### output
+output_dir: saves/Llama-2-7B/full/SuperLog
+logging_steps: 5
+save_steps: 100
+plot_loss: True
+overwrite_output_dir: false
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-5
+num_train_epochs: 1.5
+lr_scheduler_type: cosine
+warmup_ratio: 0.0  # Assuming warmup_steps is set to 0, warmup_ratio should be 0
+bf16: True
+ddp_timeout: 180000000
+flash_attn: auto
+
+### eval
+val_size: 0.1  # Assuming you want to keep the default validation size
+per_device_eval_batch_size: 1  # Assuming you want to keep the default eval batch size
+eval_strategy: epoch
+eval_steps: 500  # Assuming you want to keep the default eval steps
+
+### additional parameters
+packing: False
+report_to: none
+include_num_input_tokens_seen: True
+optim: adamw_torch
