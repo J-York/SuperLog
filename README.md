@@ -1,5 +1,11 @@
 # SuperLog & NLPLog
+
+This repository includes the training codes for LogCraft, as well as a specifically designed interpretable dataset for the log analysis domain, named NLPLog.
+
 ## NLPLog Dataset
+
+NLPLog is a question-answer dataset generated through interactions with ChatGPT. We utilized the publicly available log datasets provided by LogHub, posing questions to ChatGPT across five defined dimensions. This approach yielded conversational data rich in log-related domain information and high interpretability. NLPLog will serve as the dataset for the subsequent continuous pre-training of SuperLog.
+
 **NLPLog Data Path**: `data/NLPLog.json`
 
 ## Continual Pre-training For SuperLog
