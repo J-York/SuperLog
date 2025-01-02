@@ -1,0 +1,44 @@
+### model
+model_name_or_path: saves/Llama-2-7B/full/SuperLog
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: True
+finetuning_type: full
+deepspeed: cache/ds_z3_config.json
+
+### dataset
+dataset: alpaca_1k
+template: default
+cutoff_len: 2048
+max_samples: 100000
+overwrite_cache: false
+preprocessing_num_workers: 16
+dataset_dir: data
+
+### output
+output_dir: saves/Llama-2-7B/full/SuperLog_IF
+logging_steps: 5
+save_steps: 100
+plot_loss: True
+overwrite_output_dir: false
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-5
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.0  # warmup_steps is set to 0
+bf16: True
+ddp_timeout: 180000000
+flash_attn: auto
+max_grad_norm: 1.0
+warmup_steps: 0
+
+### eval
+val_size: 0.1  # Assuming you want to keep the default validation size
+per_device_eval_batch_size: 1  # Assuming you want to keep the default eval batch size
+eval_strategy: epoch
+eval_steps: 500  # Assuming you want to keep the default eval steps
