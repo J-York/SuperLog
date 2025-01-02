@@ -9,6 +9,9 @@ NLPLog is a question-answer dataset generated through interactions with ChatGPT.
 **NLPLog Data Path**: `data/NLPLog.json`
 
 ## Continual Pre-training For SuperLog
+
+At this stage, we leverage the open-source LLM training framework, LLaMa-Factory, to continuously pre-train an open-source large model using the NLPLog dataset. In this step, we infuse interpretable knowledge, equipping the general-purpose LLM with domain-specific information related to log analysis.
+
 1. Environment Configuration
 ```bash
 pip install -e ".[torch,metrics,deepspeed]"
