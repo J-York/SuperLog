@@ -6,7 +6,7 @@ This repository includes the training codes for SuperLog, as well as a specifica
 
 NLPLog is a question-answer dataset generated through interactions with ChatGPT. We utilized the publicly available log datasets provided by LogHub, posing questions to ChatGPT across five defined dimensions. This approach yielded conversational data rich in log-related domain information and high interpretability. NLPLog will serve as the dataset for the subsequent continuous pre-training of SuperLog.
 
-**NLPLog Data Path**: `data/NLPLog.json`
+NLPLog data can be get [here](https://figshare.com/s/569d5ed3bbbe83dccd55?file=54798197).
 
 ## Continual Pre-training For SuperLog
 
